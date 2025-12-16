@@ -10,15 +10,18 @@ namespace Pelidex
 {
     internal static class Consultas
     {
-        static Conexion conectar = new Conexion();
+        //static Conexion conectar = new Conexion();
        
         public static List<Pelicula> ListarPeliculas()
         {
             List<Pelicula> peliculas = new List<Pelicula>();
             List<Genero> generos = ListarGeneros();
+            Conexion conectar = new Conexion();
 
             using (SqlConnection con = conectar.AbrirConexion())
             {
+
+
                 string consulta = "select id_Pelicula, nombre_pelicula, id_GeneroPelicula from Peliculas";
                 using (SqlCommand cmdConsulta = new SqlCommand(consulta, con))
                 {
@@ -44,7 +47,7 @@ namespace Pelidex
         public static List<Genero> ListarGeneros()
         {
             List<Genero> generos = new List<Genero>();
-
+            Conexion conectar = new Conexion();
             using (SqlConnection con = conectar.AbrirConexion())
             {
                 string consulta = "select id_genero, descripcion from Genero";

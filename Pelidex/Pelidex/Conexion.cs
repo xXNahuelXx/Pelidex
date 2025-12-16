@@ -16,8 +16,8 @@ namespace Pelidex
         public Conexion()
         {
             //this.CadenaConexion = "Server=localhost\\SQL2014;Database=Pelidex;TrustServerCertificate=True;"; //Parametros de conexion: Servidor - Base de datos
-            /*Notebook*///this.CadenaConexion = "Server=localhost\\SQL2014; Database=Pelidex; Persist Security Info=True; Integrated Security=SSPI;Connect Timeout=90;Pooling=true;Max Pool Size=400; Encrypt=False;";
-            /*PC*/this.CadenaConexion = "Server=DESKTOP-CI79R3F; Database=Pelidex; Persist Security Info=True; Integrated Security=SSPI;Connect Timeout=90;Pooling=true;Max Pool Size=400; Encrypt=False;";
+            /*Notebook*/this.CadenaConexion = "Server=localhost\\SQL2014; Database=Pelidex; Persist Security Info=True; Integrated Security=SSPI;Connect Timeout=90;Pooling=true;Max Pool Size=400; Encrypt=False;";
+            /*PC*///this.CadenaConexion = "Server=DESKTOP-CI79R3F; Database=Pelidex; Persist Security Info=True; Integrated Security=SSPI;Connect Timeout=90;Pooling=true;Max Pool Size=400; Encrypt=False;";
             this._connection = new SqlConnection(this.CadenaConexion);
         }
 
